@@ -8,19 +8,24 @@ int main( int argc, char *argv[] ) {
 	char* filename = argv[1];
 	char* linething = "";
 	int linenbr = 0;		
+	
+	if (!strcmp(filename, "rick")){
+			printf("https://www.youtube.com/watch?v=dQw4w9WgXcQ\n");
+	}
+
 	if (argc > 2){
 		linething = argv[2];
 	}
 
 	fp = fopen(filename, "r");
 	if (fp == NULL){
-		printf("Ye shant finna open %s bitch",filename);
+		printf("________________________________________________________________________\nvvvvvvvvvvvvvvv Ye shant finna open %s bitch vvvvvvvvvvvvvvv\n________________________________________________________________________",filename);
 		return 1;
 	}
-	printf("Here lay thine file, thot\n");
+	printf("________________________________________________________________________\nvvvvvvvvvvvvvvv Here lay thine file, thot vvvvvvvvvvvvvvv\n________________________________________________________________________\n");
 	while (fgets(str, MAXCHAR, fp) != NULL){
 		
-		if (!strcmp(linething, "-t")){
+		if (strcmp(linething, "-ln")){
 			if (linenbr >= 10 && linenbr < 100){
 				printf("%d  | ", linenbr);
 			}
